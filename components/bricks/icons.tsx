@@ -52,4 +52,43 @@ export const YoutubeIcon = () => {
     )
 }
 
+export const TwitterIcon = () => {
+    return (
+        <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="35" height="35" rx="17.5" fill="#0A2456"></rect>
+            <path
+                d="M10.0365 10L15.8278 17.7218L10 24H11.3117L16.4141 18.5032L20.5365 24H25L18.8827 15.8439L24.3073 10H22.9956L18.2967 15.0623L14.5 10H10.0365ZM11.9654 10.9634H14.0159L23.0708 23.0366H21.0203L11.9654 10.9634Z"
+                fill="white"></path>
+        </svg>
+    )
+}
+
+export const TelegramIcon= () => {
+    return (
+        <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="35" height="35" rx="17.5" fill="#0A2456"></rect>
+            <path
+                d="M24.5 11.0269L21.8703 24.7557C21.8703 24.7557 21.5023 25.7076 20.4915 25.2511L14.424 20.4335L14.3959 20.4193C15.2155 19.6572 21.5708 13.7398 21.8486 13.4716C22.2786 13.0562 22.0117 12.8089 21.5124 13.1227L12.1247 19.2963L8.50293 18.0344C8.50293 18.0344 7.93298 17.8245 7.87814 17.368C7.82259 16.9107 8.52169 16.6634 8.52169 16.6634L23.2865 10.6653C23.2865 10.6653 24.5 10.1132 24.5 11.0269Z"
+                fill="white"></path>
+        </svg>
+    )
+}
+
+export const DropdownIcon = (props:{isUp:boolean}) => {
+    return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={"transition-all transform " + (props.isUp? "rotate-180" : "rotate-0")} >
+            <path d="M18 9L12 15L6 9" stroke="white"></path>
+        </svg>
+    )
+}
+
+export const DiagArrow = () => {
+    return (
+        <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M23.1567 11.3137L23.1567 10.3137L24.1567 10.3137L24.1567 11.3137L23.1567 11.3137ZM13.2572 22.6274C12.8667 23.0179 12.2335 23.0179 11.843 22.6274C11.4525 22.2369 11.4525 21.6037 11.843 21.2132L13.2572 22.6274ZM14.6714 10.3137H23.1567L23.1567 12.3137H14.6714L14.6714 10.3137ZM24.1567 11.3137L24.1567 19.799H22.1567L22.1567 11.3137L24.1567 11.3137ZM23.8638 12.0208L13.2572 22.6274L11.843 21.2132L22.4496 10.6066L23.8638 12.0208Z"
+                fill="white"></path>
+        </svg>
+    )
+}
 
