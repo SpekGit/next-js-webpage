@@ -2,7 +2,6 @@ import React from 'react';
 import {InstagramIcon, LinkedinIcon, TelegramIcon, TwitterIcon, YoutubeIcon} from "@/components/bricks/icons";
 import Link from "next/link";
 
-let space:string = "20";
 const SocialNetworkList = () => {
     return (
         <div>

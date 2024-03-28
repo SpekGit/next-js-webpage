@@ -4,13 +4,7 @@ import ListOfLinksForHeader from "@/components/bricks/list-of-links-for-header";
 import SocialNetworkList from "@/components/social-network-list";
 import LogoWithLink from "@/components/bricks/logo-with-link";
 
-let links: { linkName: string; linkHref: string }[] = [
-    { linkName: "Home", linkHref: "/" },
-    { linkName: "AIF 2023", linkHref: "/" },
-    { linkName: "News", linkHref: "/" },
-    { linkName: "Gallery", linkHref: "/" },
-    { linkName: "About Kazakhstan", linkHref: "/" }
-];
+
 
 const Header = () => {
     return (
