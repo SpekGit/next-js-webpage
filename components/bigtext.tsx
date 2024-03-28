@@ -19,8 +19,16 @@ const Bigtext = () => {
                         Astana, Kazakhstan
                     </span>
                 </p>
-                <a className={"m-4 bg-color-secondary font-medium inline-flex px-8 py-4 rounded text-white"} href={'#'}>AIF Booklet</a>
-                <a className={"m-4 bg-color-secondary font-medium inline-flex px-8 py-4 rounded text-white"} href={'#'}>AIF Programme</a>
+                <a className={"m-4 bg-color-secondary font-medium inline-flex px-8 py-4 rounded text-white"}
+                   href={'https://aif-24-bucket.s3.eu-north-1.amazonaws.com/page-file/2tHSsUQ81rDilalrU3PiBjAKKSZSDzrNY3d0x66P.pdf'}
+                   target={"_blank"}>
+                    AIF Booklet
+                </a>
+                <a className={"m-4 bg-color-secondary font-medium inline-flex px-8 py-4 rounded text-white"}
+                   href={'https://aif-24-bucket.s3.eu-north-1.amazonaws.com/page-file/E97N4UtHNzB6L6huqJq6cQCidvGXKGlUmuivhL0q.pdf'}
+                   target={"_blank"}>
+                    AIF Programme
+                </a>
             </div>
         </div>
     );
