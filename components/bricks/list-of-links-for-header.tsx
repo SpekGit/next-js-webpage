@@ -2,8 +2,8 @@ import React from 'react';
 import Link from "next/link";
 import DropDownMenu from "@/components/bricks/drop-down-menu";
 
-const ListOfLinksForHeader = () => {
-    return (
+    const ListOfLinksForHeader = () => {
+        return (
         <nav className="flex space-x-4 text-white">
             <div>
                 <Link href={"#"} className={"hover:text-color-secondary"}>

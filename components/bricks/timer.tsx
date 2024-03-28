@@ -1,3 +1,4 @@
+'use client'
 import React, {useEffect, useState} from 'react';
 
 let destDate:Date = new Date(2024, 5, 13, 10)
@@ -8,7 +9,7 @@ type time = {
     minutes:number,
     seconds:number,
 }
-//@ TODO errors with second, client has 6, while server has 5(7)
+
 const Timer = () => {
     const calculateTimeRemaining:Function = ():time => {
         const currentTime = new Date().getTime();
@@ -22,9 +23,10 @@ const Timer = () => {
         return { days, hours, minutes, seconds };
     };
 
-    const [timeRemaining, setTimeRemaining] = useState<time>(calculateTimeRemaining());
+    const [timeRemaining, setTimeRemaining] = useState<time>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
     useEffect(() => {
+        setTimeRemaining(calculateTimeRemaining());
         const timer:NodeJS.Timeout = setInterval(() => {
             setTimeRemaining(calculateTimeRemaining());
         }, 1000);
