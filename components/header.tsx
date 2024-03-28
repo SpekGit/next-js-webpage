@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from "next/link";
-import Image from "next/image";
 import ListOfLinksForHeader from "@/components/bricks/list-of-links-for-header";
 import SocialNetworkList from "@/components/social-network-list";
 import LogoWithLink from "@/components/bricks/logo-with-link";
