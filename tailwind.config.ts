@@ -12,6 +12,13 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'video-cover': "linear-gradient(0deg, rgba(7, 28, 68, .69), rgba(7, 28, 68, .7));",
+
+        'timer-bg': "url('../public/hero_sub_bg.png')",
+      },
+
+      transformOrigin: {
+        'top-right-4/5-0': '80% 0%',
       },
       colors: {
         "color-secondary": "#036ea4",
