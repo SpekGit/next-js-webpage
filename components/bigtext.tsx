@@ -1,4 +1,5 @@
 import React from 'react';
+import H1Text from "@/components/bricks/h1-text";
 
 const Bigtext = () => {
     return (
