@@ -91,3 +91,18 @@ export const DiagArrow = () => {
     )
 }
 
+export const SwiperNext = () => {
+    return (
+        <svg width="62" height="62" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30.75 20.5001L51.25 41.0001L30.75 61.5001" stroke="#071C44" strokeWidth="2"></path>
+        </svg>
+    )
+}
+
+export const SwiperPrev = () => {
+    return (
+        <svg width="62" height="62" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg" className={"rotate-180"}>
+            <path d="M30.75 20.5001L51.25 41.0001L30.75 61.5001" stroke="#071C44" strokeWidth="2"></path>
+        </svg>
+    )
+}
