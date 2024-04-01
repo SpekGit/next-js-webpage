@@ -14,9 +14,10 @@ type SwiperParticipantsProps = {
 
 const SwiperParticipants:React.FC<SwiperParticipantsProps> = ({ props }) => {
 
-    let renderbBullet:Function = (index:number, className:string) => {
-            return '<span class="' + className + '">' + (index + 1) + '</span>';
-        }
+    let renderBulletForLargeScreen:(index: number, className: string) => string = (index, className) => {
+
+        return '<span class="!h-[2px] !opacity-100 !rounded-[0px] !w-full !m-0 bg-black 3s:!mx-[5px] 3s:!h-[12px] 3s:!min-w-[12px] ' + className + '"></span>';
+    }
 
     const breakpoints = {
         0: {
@@ -42,10 +43,9 @@ const SwiperParticipants:React.FC<SwiperParticipantsProps> = ({ props }) => {
     };
 
     return (
-        <div >
+        <div>
             <Swiper
                 modules={[A11y, Navigation, Pagination]}
-                slidesPerView={4}
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
 
@@ -55,10 +55,7 @@ const SwiperParticipants:React.FC<SwiperParticipantsProps> = ({ props }) => {
                     nextEl: '.custom-next',
                     prevEl: '.custom-prev',
                 }}
-                pagination={{ clickable: true, el: '.swiper-pagination'}}
-
-
-                preventInteractionOnTransition={true}
+                pagination={{ clickable: true, el: '.swiper-pagination', renderBullet: renderBulletForLargeScreen }}
             >
                 {props.swiperContent.map((content, index) => (
                     <SwiperSlide key={index}>
@@ -66,17 +63,21 @@ const SwiperParticipants:React.FC<SwiperParticipantsProps> = ({ props }) => {
                     </SwiperSlide>
                 ))}
             </Swiper>
-            <div className="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"></div>
-            <div className="swiper-controls flex justify-between w-[calc(66.666%+100px)] left-[50%]">
-                <button className="custom-prev p-2 cursor-pointer transition-all ease-in-out duration-200">
+            <div className={"flex justify-center items-center"}>
+                <button className="custom-prev cursor-pointer transition-all ease-in-out duration-200 3s:scale-0">
                     <SwiperPrev/>
                 </button>
-                <button className="custom-next p-2 cursor-pointer transition-all ease-in-out duration-200">
+                <div className="swiper-pagination !w-[66%] h-full !static flex"/>
+                <button className="custom-next cursor-pointer transition-all ease-in-out duration-200 3s:scale-0">
                     <SwiperNext/>
                 </button>
             </div>
         </div>
     );
 };
+
+//swiper-pagination flex content-between justify-center items-center !w-[30%]
+
+//swiper-pagination flex content-between justify-center items-center !w-[30%] swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal
 
 export default SwiperParticipants;
